@@ -1,7 +1,56 @@
-import React from 'react'
+import moment from 'moment'
+import Link from 'next/link'
+import React, { useState, useEffect } from 'react'
+import { getRecentPosts, getSimilaPosts } from '../services'
 
-const PostWidget = () => {
-  return <div>POST-WIDGET</div>
+const PostWidget = ({ categories, slug }) => {
+  const [relatedPosts, setRelatedPosts] = useState([])
+  useEffect(() => {
+    //muestra si el slug es una direccion de post muestra los post que tengan las mismas categorias
+    //si no muestra todos los post
+    if (slug) {
+      getSimilarPosts(categories, slug).then((result) =>
+        setRelatedPosts(result)
+      )
+    } else {
+      getRecentPosts().then((result) => setRelatedPosts(result))
+    }
+  }, [slug])
+
+  console.log(relatedPosts)
+
+  return (
+    <div className="mb-8 rounded-lg bg-white p-8 shadow-lg">
+      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
+        {slug ? 'Posts Relacionados' : 'Posts Recientes'}
+      </h3>
+      {relatedPosts.map((post) => (
+        <div key={post.node.title} className="mb-4 flex w-full items-center ">
+          <div className="w-16 flex-none">
+            <img
+              alt={post.node.title}
+              height="60px"
+              width="60px"
+              className="rounded-full align-middle"
+              src={post.node.featuredImage.url}
+            />
+          </div>
+          <div className=" ml-4 flex-grow">
+            <p className="font-xs text-gray-500">
+              {moment(post.node.createdAt).format('DD-MM-YYYY')}
+            </p>
+            <Link
+              href={`/post/${post.node.slug}`}
+              key={post.node.title}
+              className="text-md"
+            >
+              {post.node.title}
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 }
 
 export default PostWidget
