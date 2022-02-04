@@ -59,7 +59,7 @@ export const getRecentPosts = async () => {
 
 //trae todos los posts similares por categoria
 //linea 65: "no mostrar el post seleccionado pero si algunos posts que incluyan la misma categoria"
-export const getSimilaPosts = async () => {
+export const getSimilarPosts = async () => {
   const query = gql`
     query GetPostDetails($slug: String!, $categories: [String!]) {
       postsConnection( where: { slug_not: $slug, AND: { categories_some: { slug_in: $categories}}
@@ -78,6 +78,28 @@ export const getSimilaPosts = async () => {
     }
   `
 
+  const results = await request(graphqlAPI, query)
+
+  return results.postsConnection.edges
+}
+
+//trae todas las categorias
+export const getCategories = async () => {
+  const query = gql`
+    query GetCategories {
+      postsConnection {
+        edges {
+          node {
+            categories {
+              id
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
+  `
   const results = await request(graphqlAPI, query)
 
   return results.postsConnection.edges
