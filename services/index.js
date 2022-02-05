@@ -20,6 +20,7 @@ export const getPosts = async () => {
             author {
               name
               id
+              description
               image {
                 url
               }
@@ -130,6 +131,7 @@ export const getPostDetails = async (slug) => {
         }
         author {
           name
+          description
           image {
             url
           }
