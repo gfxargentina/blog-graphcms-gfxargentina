@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Key } from 'react'
 import { PostCard, Categories, PostWidget } from '../components/'
 import { getPosts } from '../services'
 

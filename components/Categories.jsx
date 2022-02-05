@@ -8,18 +8,17 @@ const Categories = () => {
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories))
   }, [])
-  console.log(categories)
+
+  //convierte el array de objetos anidados de la api en 1 solo array de objetos
+  //const categoriesFlat = categories.flatMap((item) => item.node.categories)
 
   return (
     <div className="mb-8  rounded-lg bg-white p-8 pb-12 shadow-lg">
       <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Categories</h3>
       {categories?.map((category) => (
         <div className="flex-column flex">
-          <Link
-            key={category.node.categories[0].slug}
-            href={`/category/${category.node.categories[0].slug}`}
-          >
-            {category.node.categories[0].name}
+          <Link key={category.slug} href={`/category/${category.slug}`}>
+            {category.name}
           </Link>
         </div>
       ))}

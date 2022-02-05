@@ -38,69 +38,119 @@ export const getPosts = async () => {
 export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
-      postsConnection(orderBy: createdAt_DESC last: 4) {
-        edges {
-          node {
-            title
-            createdAt
-            slug
-            featuredImage {
-              url
-            }
-          }
-    }
-  }
+      posts(
+        orderBy: createdAt_ASC
+        last: 3
+      ) {
+        title
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+      }
     }
   `
-  const results = await request(graphqlAPI, query)
+  const result = await request(graphqlAPI, query)
 
-  return results.postsConnection.edges
+  return result.posts
 }
 
 //trae todos los posts similares por categoria
-//linea 65: "no mostrar el post seleccionado pero si algunos posts que incluyan la misma categoria"
-export const getSimilarPosts = async () => {
+//linea 66: "no mostrar el post seleccionado pero si algunos posts que incluyan la misma categoria"
+export const getSimilarPosts = async (categories, slug) => {
   const query = gql`
     query GetPostDetails($slug: String!, $categories: [String!]) {
-      postsConnection( where: { slug_not: $slug, AND: { categories_some: { slug_in: $categories}}
-       last: 3) {
-        edges {
-          node {
-            title
-            createdAt
-            slug
-            featuredImage {
-              url
-            }
-          }
-    }
-  }
+      posts(
+        where: {
+          slug_not: $slug
+          AND: { categories_some: { slug_in: $categories } }
+        }
+        last: 3
+      ) {
+        title
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+      }
     }
   `
+  const result = await request(graphqlAPI, query, { slug, categories })
 
-  const results = await request(graphqlAPI, query)
-
-  return results.postsConnection.edges
+  return result.posts
 }
 
 //trae todas las categorias
 export const getCategories = async () => {
   const query = gql`
-    query GetCategories {
-      postsConnection {
-        edges {
-          node {
-            categories {
-              id
-              name
-              slug
-            }
+    query GetGategories {
+      categories {
+        name
+        slug
+      }
+    }
+  `
+
+  const result = await request(graphqlAPI, query)
+
+  return result.categories
+}
+// export const getCategories = async () => {
+//   const query = gql`
+//     query GetCategories {
+//       postsConnection {
+//         edges {
+//           node {
+//             categories {
+//               id
+//               name
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `
+//   const results = await request(graphqlAPI, query)
+
+//   return results.postsConnection.edges
+// }
+
+//trae todos los detalles del post
+export const getPostDetails = async (slug) => {
+  const query = gql`
+    query GetPostDetails($slug: String!) {
+      post(where: { slug: $slug }) {
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        author {
+          name
+          image {
+            url
           }
+        }
+        createdAt
+        slug
+        content {
+          raw
+        }
+        categories {
+          name
+          slug
+        }
+        content {
+          raw
         }
       }
     }
   `
-  const results = await request(graphqlAPI, query)
 
-  return results.postsConnection.edges
+  const result = await request(graphqlAPI, query, { slug })
+
+  return result.post
 }

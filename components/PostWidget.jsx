@@ -1,7 +1,7 @@
 import moment from 'moment'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
-import { getRecentPosts, getSimilaPosts } from '../services'
+import { getRecentPosts, getSimilarPosts } from '../services'
 
 const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([])
@@ -17,34 +17,32 @@ const PostWidget = ({ categories, slug }) => {
     }
   }, [slug])
 
-  console.log(relatedPosts)
-
   return (
     <div className="mb-8 rounded-lg bg-white p-8 shadow-lg">
       <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
         {slug ? 'Posts Relacionados' : 'Posts Recientes'}
       </h3>
       {relatedPosts.map((post) => (
-        <div key={post.node.title} className="mb-4 flex w-full items-center ">
+        <div key={post.title} className="mb-4 flex w-full items-center ">
           <div className="w-16 flex-none">
             <img
-              alt={post.node.title}
+              alt={post.title}
               height="60px"
               width="60px"
               className="rounded-full align-middle"
-              src={post.node.featuredImage.url}
+              src={post.featuredImage.url}
             />
           </div>
           <div className=" ml-4 flex-grow">
             <p className="font-xs text-gray-500">
-              {moment(post.node.createdAt).format('DD-MM-YYYY')}
+              {moment(post.createdAt).format('DD-MM-YYYY')}
             </p>
             <Link
-              href={`/post/${post.node.slug}`}
-              key={post.node.title}
+              href={`/post/${post.slug}`}
+              key={post.title}
               className="text-md"
             >
-              {post.node.title}
+              {post.title}
             </Link>
           </div>
         </div>
