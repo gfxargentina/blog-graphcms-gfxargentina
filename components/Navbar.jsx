@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Header = () => {
+const Navbar = () => {
   return (
     <>
       <div className="mb-10 h-8 w-full items-center p-12 text-white ">
@@ -85,45 +85,8 @@ const Header = () => {
 
         <div className="mt-10 border-b"></div>
       </div>
-      {/* <div>
-        <div className="container mx-auto mb-8  px-10">
-          <div className="inline-block w-full border-b border-blue-400 py-8">
-            <div className="block md:float-left">
-              <Link href="/">
-                <span className="cursor-pointer text-4xl font-bold text-white">
-                  GFXARGENTINA
-                </span>
-              </Link>
-            </div>
-
-            <div className="hidden  md:float-left  md:contents">
-              <span className="mt-2 ml-4 cursor-pointer  font-semibold text-white md:float-right ">
-                <Link href={`/contacto`}>Contacto</Link>
-              </span>
-              <span className="mt-2 ml-4 cursor-pointer  font-semibold text-white md:float-right ">
-                <Link href={`/blog`}>Blog</Link>
-              </span>
-            </div>
-
-            <div className="float-right md:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-25 h-10"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   )
 }
 
-export default Header
+export default Navbar
