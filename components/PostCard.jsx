@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
           className="absolute h-80 w-full rounded-t-lg object-cover object-top shadow-lg lg:rounded-lg"
         />
       </div>
-      <h1 className="mb-8 cursor-pointer text-center text-3xl font-semibold transition duration-300 hover:text-pink-600">
+      <h1 className="mb-8 cursor-pointer text-center text-3xl font-semibold transition duration-300 hover:text-green-600">
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
 
@@ -27,7 +27,7 @@ const PostCard = ({ post }) => {
           <p className="ml-2 inline align-middle text-lg text-gray-700 ">
             {post.author.name}
           </p>
-          <div className="font-medium text-gray-700">
+          <div className="ml-2 font-medium text-gray-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mr-2 inline h-6 w-6 text-pink-500"

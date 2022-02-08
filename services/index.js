@@ -47,6 +47,7 @@ export const getRecentPosts = async () => {
         featuredImage {
           url
         }
+        excerpt
         author {
               name
               id
@@ -57,6 +58,9 @@ export const getRecentPosts = async () => {
             }
         createdAt
         slug
+        categories {
+        name        
+      }
       }
     }
   `

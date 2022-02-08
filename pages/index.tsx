@@ -8,7 +8,6 @@ export default function Home() {
         <title>Gfxargentina Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <BlogRecentsPosts />
     </div>
   )

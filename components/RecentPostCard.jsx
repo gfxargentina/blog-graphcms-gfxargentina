@@ -3,38 +3,56 @@ import moment from 'moment'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const RecentPostCard = ({ post }) => (
-  <div className="relative h-72">
-    <div
-      className="absolute inline-block h-72 w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-md"
-      style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
-    />
-    <div className="absolute h-72 w-full rounded-lg bg-gradient-to-b from-gray-400 via-gray-700 to-black bg-center opacity-50" />
-    <div className="absolute flex h-full w-full flex-col items-center justify-center rounded-lg p-4">
-      <p className="text-shadow mb-4 text-xs font-semibold text-white">
-        {moment(post.createdAt).format('DD-MM-YYYY')}
-      </p>
-      <p className="text-shadow mb-4 text-center text-2xl font-semibold text-white">
-        {post.title}
-      </p>
-      <div className="absolute bottom-5 flex w-full items-center justify-center">
-        <Image
-          unoptimized
-          alt={post.author.name}
-          height="30px"
-          width="30px"
-          className="rounded-full align-middle drop-shadow-lg"
-          src={post.author.image.url}
-        />
-        <p className="text-shadow ml-2 inline align-middle font-medium text-white">
-          {post.author.name}
-        </p>
+const RecentPostCard = ({ post }) => {
+  console.log(post)
+  return (
+    <div className="rounded-xl  bg-white shadow-2xl">
+      <img
+        src={post.featuredImage.url}
+        alt=""
+        className="h-40 w-full rounded-t-xl object-cover "
+      />
+
+      <div className="p-2">
+        <div className="flex flex-row">
+          <div className="rounded-lg bg-yellow-500 px-2 py-1 text-xs uppercase text-white">
+            {post.categories[0].name}
+          </div>
+        </div>
+        <h2 className="mt-4 mb-4 text-2xl font-bold">{post.title}</h2>
+
+        <p className="mt-4 text-gray-600 line-clamp-3 ">{post.excerpt}</p>
+
+        <div className="mt-8 border"></div>
+
+        <div className="mt-2 mb-4 flex flex-row items-center">
+          <img
+            src={post.author.image.url}
+            alt=""
+            className="mr-2 h-6 w-6 rounded-full"
+          />
+          <div className="gont-bold mr-2">{post.author.name}</div>
+          <div className="text-gray-400">
+            {moment(post.createdAt).format('DD-MM-YYYY')}
+          </div>
+        </div>
       </div>
     </div>
-    <Link href={`/post/${post.slug}`}>
-      <span className="absolute h-full w-full cursor-pointer" />
-    </Link>
-  </div>
-)
+  )
+}
 
 export default RecentPostCard
+
+{
+  /* <div className="max-w-sm rounded  shadow-xl">
+      <img src={post.featuredImage.url} alt="" className="w-full" />
+      <div className="py4 px-6">
+        <span className="mr-2 mt-5 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+          #Categoria
+        </span>
+      </div>
+      <div className="px-6 py-4">
+        <div className="text-xl font-bold text-white">{post.title}</div>
+      </div>
+    </div> */
+}
