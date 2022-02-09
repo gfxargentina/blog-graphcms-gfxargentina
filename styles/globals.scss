@@ -6,6 +6,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -24,6 +25,18 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

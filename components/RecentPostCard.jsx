@@ -4,13 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const RecentPostCard = ({ post }) => {
-  console.log(post)
   return (
     <div className="rounded-xl  bg-white shadow-2xl">
       <img
         src={post.featuredImage.url}
-        alt=""
-        className="h-40 w-full rounded-t-xl object-cover "
+        alt={post.featuredImage.url}
+        className="h-36 w-full rounded-t-xl object-cover "
       />
 
       <div className="p-2">

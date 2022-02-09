@@ -4,7 +4,7 @@ import { getRecentPosts } from '../services'
 
 const BlogRecentsPosts = () => {
   const [recentPosts, setRecentPosts] = useState([])
-  console.log(recentPosts)
+
   useEffect(() => {
     getRecentPosts().then((result) => {
       setRecentPosts(result)
