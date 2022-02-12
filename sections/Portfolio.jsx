@@ -8,20 +8,23 @@ const proyectos = [
     github: 'link',
     deploy: 'link',
     categoria: 'Motion Graphics',
+    stack: 'Mern - Nextjs - Tailwind Css',
   },
   {
-    titulo: 'Gestion Taller',
+    titulo: 'Video Publicitario',
     img: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     github: 'link',
     deploy: 'link',
     categoria: 'Web Dev',
+    stack: 'After Effects',
   },
   {
-    titulo: 'Gestion Taller',
+    titulo: 'Landing Page',
     img: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     github: 'link',
     deploy: 'link',
     categoria: 'Web Dev',
+    stack: 'Html 5 - CSS3 - Javascript',
   },
 ]
 
@@ -29,7 +32,9 @@ const Portfolio = () => {
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
-        <h2 className="mt-5 mb-5 text-2xl text-white">Mis Proyectos</h2>
+        <h2 className="mt-5 mb-5 text-center text-2xl text-white">
+          Mis Proyectos
+        </h2>
 
         {/* <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {recentPosts.map((post) => (
