@@ -3,6 +3,10 @@ import moment from 'moment'
 import Image from 'next/image'
 import Link from 'next/link'
 
+/**TODO
+ * agregar links para que lleve a los posts
+ */
+
 const RecentPostCard = ({ post }) => {
   return (
     <div className="rounded-xl  bg-white shadow-2xl">

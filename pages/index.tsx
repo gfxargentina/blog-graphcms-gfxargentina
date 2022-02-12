@@ -1,6 +1,8 @@
+import React from 'react'
 import Head from 'next/head'
 import BlogRecentsPosts from '../sections/BlogRecentsPosts'
 import Hero from '../sections/Hero'
+import Portfolio from '../sections/Portfolio'
 
 export default function Home() {
   return (
@@ -11,6 +13,7 @@ export default function Home() {
       </Head>
       <Hero />
       <BlogRecentsPosts />
+      <Portfolio />
     </div>
   )
 }
