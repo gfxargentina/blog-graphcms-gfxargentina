@@ -4,6 +4,7 @@ import BlogRecentsPosts from '../sections/BlogRecentsPosts'
 import Hero from '../sections/Hero'
 import Portfolio from '../sections/Portfolio'
 import Contact from '../sections/Contact'
+import Footer from '../sections/Footer'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <BlogRecentsPosts />
       <Portfolio />
       <Contact />
+      <Footer />
     </div>
   )
 }
