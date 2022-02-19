@@ -14,7 +14,7 @@ const Categories = () => {
 
   return (
     <div className="mb-8  rounded-lg bg-white p-8 pb-12 shadow-lg">
-      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Categories</h3>
+      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Categorias</h3>
       {categories?.map((category) => (
         <div key={category.slug} className="flex-column flex">
           <Link href={`/category/${category.slug}`}>{category.name}</Link>
