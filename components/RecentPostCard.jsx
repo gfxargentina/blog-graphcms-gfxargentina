@@ -24,7 +24,9 @@ const RecentPostCard = ({ post }) => {
               {post.categories[0].name}
             </div>
           </div>
-          <h2 className="mt-4 mb-4 text-2xl font-bold">{post.title}</h2>
+          <h2 className="mt-4 mb-4 text-2xl font-bold">
+            <Link href={`/post/${post.slug}`}>{post.title}</Link>
+          </h2>
 
           <p className="mt-4 text-gray-600 line-clamp-3 ">{post.excerpt}</p>
 
