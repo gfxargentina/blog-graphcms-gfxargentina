@@ -1,39 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PortfolioCard } from '../components'
-
-const proyectos = [
-  {
-    titulo: 'Gestion Taller',
-    img: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-    github: 'link',
-    deploy: 'link',
-    categoria: 'Motion Graphics',
-    stack: 'Mern - Nextjs - Tailwind Css',
-  },
-  {
-    titulo: 'Video Publicitario',
-    img: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-    github: 'link',
-    deploy: 'link',
-    categoria: 'Web Dev',
-    stack: 'After Effects',
-  },
-  {
-    titulo: 'Landing Page',
-    img: 'https://images.unsplash.com/photo-1596496181848-3091d4878b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-    github: 'link',
-    deploy: 'link',
-    categoria: 'Web Dev',
-    stack: 'Html 5 - CSS3 - Javascript',
-  },
-]
+import { getPortfolio } from '../services'
 
 const Portfolio = () => {
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    getPortfolio().then((result) => {
+      setProjects(result)
+    })
+  }, [])
+
+  const proyectos = projects.map((proyect) => proyect)
+  console.log(projects)
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
-        <h2 className="mt-5 mb-5 text-center text-2xl text-white">
-          Mis Proyectos
+        <h2 className="mt-10 mb-5 text-center text-2xl text-white">
+          Mis Proyectos Web y Videos Motion Graphics
         </h2>
 
         {/* <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -45,10 +29,8 @@ const Portfolio = () => {
           <div className="">
             <div className="xs:grid-cols-2 grid  gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
               {proyectos.map((portfolio) => (
-                <div className="">
-                  <div key={portfolio.titulo}>
-                    <PortfolioCard portfolio={portfolio} />
-                  </div>
+                <div key={portfolio.node.titulo}>
+                  <PortfolioCard portfolio={portfolio.node} />
                 </div>
               ))}
             </div>

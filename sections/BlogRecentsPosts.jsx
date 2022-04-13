@@ -27,10 +27,8 @@ const BlogRecentsPosts = () => {
           <div className="">
             <div className="xs:grid-cols-2 grid  gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
               {recentPosts.map((post) => (
-                <div className="">
-                  <div className="key={post.title}">
-                    <RecentPostCard post={post} />
-                  </div>
+                <div key={post.title}>
+                  <RecentPostCard post={post} />
                 </div>
               ))}
             </div>

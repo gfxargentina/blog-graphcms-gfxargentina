@@ -1,64 +1,84 @@
-import React, { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
-const featuredPost = [
-  'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1543083115-638c32cd3d58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
-  'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-]
+import { getRecentPosts } from '../services'
 
-let count = 0
-let slideInterval
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
 
 const HeroPostCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  // const [selectedIndex, setSelectedIndex] = useState(0)
 
-  const slideRef = useRef()
+  const [recentPosts, setRecentPosts] = useState([])
 
-  const removeAnimation = () => {
-    slideRef.current.classList.remove('fade-anim')
-  }
+  const featuredPost = recentPosts?.map((post) => post.featuredImage.url)
+  const slugUrl = recentPosts?.map((post) => post.slug)
+  const title = recentPosts?.map((post) => post.title)
 
-  useEffect(() => {
-    slideRef.current.addEventListener('animationend', removeAnimation)
-    slideRef.current.addEventListener('mouseenter', pauseSlider)
-    slideRef.current.addEventListener('mouseleave', startSlider)
-    startSlider()
+  //const [selectedImage, setSelectedImage] = useState('')
 
-    //clean up DOM
-    return () => {
-      pauseSlider()
-    }
+  useEffect(async () => {
+    const data = await getRecentPosts()
+    setRecentPosts(data)
+
+    //setSelectedImage(data[0].featuredImage.url)
   }, [])
 
-  const startSlider = () => {
-    slideInterval = setInterval(() => {
-      handleNext()
-    }, 3000)
-  }
+  // const handlePrev = () => {
+  //   const condition = selectedIndex > 0
+  //   const nextIndex = condition ? selectedIndex - 1 : featuredPost.length - 1
+  //   setSelectedImage(featuredPost[nextIndex])
+  //   setSelectedIndex(nextIndex)
+  // }
 
-  const pauseSlider = () => {
-    clearInterval(slideInterval)
-  }
+  // const handleNext = () => {
+  //   const condition = selectedIndex < featuredPost.length - 1
+  //   const nextIndex = condition ? selectedIndex + 1 : 0
 
-  const handleNext = () => {
-    count = (count + 1) % featuredPost.length
-    setCurrentIndex(count)
-    slideRef.current.classList.add('fade-anim')
-  }
-
-  const handlePrev = () => {
-    const postLength = featuredPost.length
-    count = (currentIndex + postLength - 1) % postLength
-    setCurrentIndex(count)
-    slideRef.current.classList.add('fade-anim')
-  }
+  //   setSelectedImage(featuredPost[nextIndex])
+  //   setSelectedIndex(nextIndex)
+  // }
 
   return (
-    <div ref={slideRef} className="relative w-full select-none">
-      <div className="aspect-w-16 aspect-h-7">
-        <img src={featuredPost[currentIndex]} alt="" className="object-cover" />
-      </div>
+    <section className="relative mb-5 w-full select-none">
+      <div>
+        <Carousel
+          autoPlay
+          infiniteLoop
+          showStatus={false}
+          //showIndicators={false}
+          showThumbs={false}
+          interval={3000}
+        >
+          <Link href={`/post/${slugUrl[0]}`}>
+            <div className="aspect-w-16 aspect-h-7 cursor-pointer">
+              <img src={featuredPost[0]} className="object-cover " alt="" />
+              <p className="text-4xl font-bold text-white shadow-2xl">
+                {title[0]}
+              </p>
+            </div>
+          </Link>
+          <Link href={`/post/${slugUrl[1]}`}>
+            <div className="aspect-w-16 aspect-h-7 cursor-pointer">
+              <img src={featuredPost[1]} className="object-cover" alt="" />
+              <p className="text-4xl font-bold text-white shadow-2xl">
+                {title[1]}
+              </p>
+            </div>
+          </Link>
+          <Link href={`/post/${slugUrl[2]}`}>
+            <div className="aspect-w-16 aspect-h-7 cursor-pointer">
+              <img src={featuredPost[2]} className="object-cover" alt="" />
+              <p className="text-4xl font-bold text-white shadow-2xl">
+                {title[2]}
+              </p>
+            </div>
+          </Link>
+        </Carousel>
 
+        {/* <img src={selectedImage} alt="" className="object-cover" />
+      </div>
       <div className="absolute top-1/2 flex w-full -translate-y-1/2 transform items-center justify-between px-3 text-white">
         <button
           className="shadow-2xl hover:text-green-700"
@@ -97,9 +117,9 @@ const HeroPostCarousel = () => {
               d="M13 5l7 7-7 7M5 5l7 7-7 7"
             />
           </svg>
-        </button>
+        </button> */}
       </div>
-    </div>
+    </section>
   )
 }
 

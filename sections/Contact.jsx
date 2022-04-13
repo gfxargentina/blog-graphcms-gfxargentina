@@ -7,7 +7,7 @@ import github from '../public/github2.png'
 
 const Contact = () => {
   return (
-    <div className="mt-10 flex w-full items-center justify-center">
+    <div className="mt-12 flex w-full items-center justify-center">
       <div className="relative">
         <div className="absolute inset-0 rounded-xl bg-blue-300 blur-sm"></div>
         <div className="relative flex w-full max-w-7xl  flex-col space-y-6 rounded-xl bg-black  p-8 text-white shadow-lg md:flex-row md:space-x-6 md:space-y-0  ">

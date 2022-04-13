@@ -40,7 +40,7 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
       posts(
-        orderBy: createdAt_DESC
+        orderBy: createdAt_ASC
         last: 6
       ) {
         title
@@ -177,4 +177,30 @@ export const getComments = async (slug) => {
   const result = await request(graphqlAPI, query, { slug })
 
   return result.comments
+}
+
+//trae todas los proyectos del portfolio
+export const getPortfolio = async () => {
+  const query = gql`
+    query Projects {
+      portfoliosConnection(orderBy: createdAt_DESC, last: 6) {
+        edges {
+          node {
+            titulo
+            categoria
+            createdAt
+            deploy
+            github
+            imagen {
+              url
+            }
+          }
+        }
+      }
+    }
+  `
+
+  const result = await request(graphqlAPI, query)
+
+  return result.portfoliosConnection.edges
 }

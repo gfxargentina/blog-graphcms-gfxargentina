@@ -7,7 +7,7 @@ const PortfolioCard = ({ portfolio }) => {
       <div className="absolute inset-0 rounded-xl bg-blue-300 blur-sm"></div>
       <div className="relative rounded-xl  bg-white ">
         <img
-          src={portfolio.img}
+          src={portfolio.imagen.url}
           alt=""
           className="h-36 w-full rounded-t-xl object-cover "
         />
@@ -24,7 +24,7 @@ const PortfolioCard = ({ portfolio }) => {
 
           <div className="mt-8 mb-4 flex justify-around ">
             {/* <img src="#" alt="" className="mr-2 h-6 w-6 rounded-full" /> */}
-            {portfolio.categoria === 'Motion Graphics' ? (
+            {portfolio.categoria === 'MOTION GRAPHICS' ? (
               ''
             ) : (
               <div className="flex items-center">
@@ -39,7 +39,12 @@ const PortfolioCard = ({ portfolio }) => {
                   </svg>
                 </div>
                 <button className="focus:shadow-outline h-8 rounded-lg border border-indigo-500 px-2 font-bold text-indigo-700 transition-colors duration-150 hover:bg-indigo-500 hover:text-indigo-100 md:text-xs">
-                  Ver Codigo
+                  <a
+                    href={portfolio.github ? portfolio.github : ''}
+                    target="_blank"
+                  >
+                    Ver Codigo
+                  </a>
                 </button>
               </div>
             )}
@@ -56,7 +61,18 @@ const PortfolioCard = ({ portfolio }) => {
                 </svg>
               </div>
               <button className=" focus:shadow-outline h-8 rounded-lg border border-indigo-500 px-2 font-bold text-indigo-700 transition-colors duration-150 hover:bg-indigo-500 hover:text-indigo-100 md:text-xs">
-                Ver Proyecto
+                {portfolio.categoria === 'MOTION GRAPHICS' ? (
+                  <a href={portfolio.deploy} target="_blank">
+                    Ver video
+                  </a>
+                ) : (
+                  <a
+                    href={portfolio.deploy ? portfolio.deploy : ''}
+                    target="_blank"
+                  >
+                    Deploy
+                  </a>
+                )}
               </button>
             </div>
           </div>
