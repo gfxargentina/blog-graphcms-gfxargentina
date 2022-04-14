@@ -5,6 +5,7 @@ import Hero from '../sections/Hero'
 import Portfolio from '../sections/Portfolio'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
+import About from '../sections/About'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <About />
       <BlogRecentsPosts />
       <Portfolio />
       <Contact />
