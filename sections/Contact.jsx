@@ -12,12 +12,13 @@ const Contact = () => {
         <div className="absolute inset-0 rounded-xl bg-blue-300 blur-sm"></div>
         <div className="relative flex w-full max-w-7xl  flex-col space-y-6 rounded-xl bg-black  p-8 text-white shadow-lg md:flex-row md:space-x-6 md:space-y-0  ">
           <div className="flex flex-col justify-between space-y-10">
-            <h1 className="text-4xl font-bold tracking-wide ">
+            <h1 className="text-4xl font-bold tracking-wide text-lime-400 ">
               Enviame un mensaje
             </h1>
-            <p className="pt-2 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              temporibus veniam laborum repudiandae placeat rem necessitatibus
+            <p className="w-auto pt-2 text-xl text-lime-400">
+              Realizo Videos Publicitarios Animados y tambien hago sitios web,
+              si necesitas algo de eso, enviame un mensaje, tu consulta no
+              molesta y la respondere a la brevedad.
             </p>
 
             <div className="flex flex-col space-y-6">
@@ -125,7 +126,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="-8 rounded-xl bg-white p-4 shadow-lg md:w-2/3">
+          <div className="w-8 rounded-xl bg-white p-4 shadow-lg md:w-2/3">
             <form className="flex flex-col space-y-4" action="">
               <div>
                 <label className="text-sm text-gray-600" htmlFor="">
@@ -134,7 +135,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="tu nombre"
-                  className=" w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-teal-300"
+                  className=" w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-lime-400 focus:ring-2 focus:ring-lime-400"
                 />
               </div>
 
@@ -145,7 +146,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="tu correo"
-                  className="w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-teal-300"
+                  className="w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-lime-400 focus:ring-2 focus:ring-lime-400"
                 />
               </div>
 
@@ -156,10 +157,10 @@ const Contact = () => {
                 <textarea
                   rows="4"
                   placeholder="tu mensaje"
-                  className="w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-gray-300 focus:ring-2 focus:ring-teal-300"
+                  className="w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-lime-400 focus:ring-2 focus:ring-lime-400"
                 />
               </div>
-              <button className="inline-block self-end rounded-lg bg-blue-700 px-6 py-2 text-sm font-bold uppercase text-white ">
+              <button className="inline-block self-end rounded-lg bg-black px-6 py-2 text-sm font-bold uppercase text-lime-400 hover:bg-lime-700 hover:text-white ">
                 Enviar
               </button>
             </form>
