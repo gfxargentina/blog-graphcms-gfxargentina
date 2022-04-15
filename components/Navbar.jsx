@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="h-[90px] w-full bg-black">
+      <div className="h-[90px] w-full ">
         <div className="mx-auto flex h-full max-w-[1240px] items-center justify-between px-4">
           <Link href={`/`}>
             <a className="text-2xl text-white">GFXARGENTINA</a>
