@@ -4,8 +4,8 @@ import logo from '../public/LogoGFXARGENTINA2.png'
 
 const Footer = () => {
   return (
-    <div className="container mx-auto mt-10 px-8 md:px-14 lg:px-24  ">
-      <div className="flex items-center justify-around">
+    <div className=" container mx-auto mt-10 px-8 md:px-14 lg:px-24  ">
+      <div className="flex flex-col items-center justify-around">
         <div className="h-45 w-45">
           <Image src={logo} />
         </div>

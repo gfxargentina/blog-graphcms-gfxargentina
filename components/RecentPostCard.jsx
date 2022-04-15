@@ -20,7 +20,7 @@ const RecentPostCard = ({ post }) => {
 
         <div className="p-2">
           <div className="flex flex-row">
-            <div className="rounded-lg bg-yellow-500 px-2 py-1 text-xs uppercase text-white">
+            <div className="rounded-lg bg-lime-500 px-2 py-1 text-xs uppercase text-white">
               {post.categories[0].name}
             </div>
           </div>

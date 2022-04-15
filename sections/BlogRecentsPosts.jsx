@@ -14,7 +14,7 @@ const BlogRecentsPosts = () => {
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
-        <h2 className="mt-5 mb-5 text-2xl text-white">
+        <h2 className="mt-5 mb-5 text-2xl text-lime-400">
           Ultimos Posts del Blog
         </h2>
 

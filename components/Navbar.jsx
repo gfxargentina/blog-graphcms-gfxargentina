@@ -1,70 +1,35 @@
 import Link from 'next/link'
+import { useState } from 'react'
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
+
+  const handleNav = () => {
+    setOpen(!open)
+  }
+
   return (
     <>
-      <div className="mb-10 h-8 w-full items-center p-12 text-white ">
-        <div className="flex justify-between">
-          <div>
-            <Link href={`/`}>
-              <span className="brand-logo cursor-pointer text-4xl font-bold">
-                GFXARGENTINA
-              </span>
-            </Link>
+      <div className="h-[90px] w-full bg-black">
+        <div className="mx-auto flex h-full max-w-[1240px] items-center justify-between px-4">
+          <Link href={`/`}>
+            <a className="text-2xl text-white">GFXARGENTINA</a>
+          </Link>
 
-            <div className="  md:hidden">
-              <div className="">
-                <div className="block">
-                  <Link href={`/blog`}>
-                    <span className="cursor-pointer text-sm hover:text-green-600">
-                      Blog
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="block">
-                  <Link href={`/contacto`}>
-                    <span className="cursor-pointer  text-sm hover:text-green-700">
-                      Contacto
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="block">
-                  <Link href={`/portfolio`}>
-                    <span className="cursor-pointer text-sm hover:text-green-700">
-                      Portfolio
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div className="hidden md:flex md:space-x-4">
+          <div className="hidden md:flex ">
+            <ul className="flex items-center   text-white">
               <Link href={`/blog`}>
-                <span className="cursor-pointer text-2xl hover:text-green-600">
-                  Blog
-                </span>
+                <a className="mr-5 flex text-2xl">Blog</a>
               </Link>
 
-              <Link href={`/contacto`}>
-                <span className="cursor-pointer text-2xl hover:text-green-700">
-                  Contacto
-                </span>
-              </Link>
-
-              <Link href={`/portfolio`}>
-                <span className="cursor-pointer text-2xl hover:text-green-700">
-                  Portfolio
-                </span>
-              </Link>
-            </div>
+              <li className="mr-5 flex text-2xl">Portfolio</li>
+              <li className="flex text-2xl">Contacto</li>
+            </ul>
           </div>
-          {/* Mobile responsive */}
-          <div className="ml-4 items-center md:hidden">
-            <button>
+
+          {/* Hamburguer */}
+          <button onClick={handleNav} className="block text-white md:hidden">
+            {open ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -79,11 +44,28 @@ const Navbar = () => {
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
-            </button>
+            ) : (
+              'cerrar'
+            )}
+          </button>
+          {/* Mobile menu */}
+          <div
+            className={
+              !open
+                ? 'absolute top-[70px] flex w-full justify-center bg-black md:hidden'
+                : 'absolute left-[-100%]'
+            }
+          >
+            <ul className="text-lime-500">
+              <Link href={`/blog`}>
+                <a className="text-xl">Blog</a>
+              </Link>
+
+              <li className="text-xl">Portfolio</li>
+              <li className="text-xl">Contacto</li>
+            </ul>
           </div>
         </div>
-
-        <div className="mt-10 border-b"></div>
       </div>
     </>
   )

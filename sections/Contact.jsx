@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="relative flex w-full max-w-7xl  flex-col space-y-6 rounded-xl bg-black  p-8 text-white shadow-lg md:flex-row md:space-x-6 md:space-y-0  ">
           <div className="flex flex-col justify-between space-y-10">
             <h1 className="text-4xl font-bold tracking-wide text-lime-400 ">
-              Enviame un mensaje
+              Envíame un mensaje
             </h1>
             <p className="w-auto pt-2 text-xl text-lime-400">
               Realizo Videos Publicitarios Animados y tambien hago sitios web,
@@ -21,82 +21,93 @@ const Contact = () => {
               molesta y la respondere a la brevedad.
             </p>
 
-            <div className="flex flex-col space-y-6">
-              <div className="inline-flex items-center space-x-2">
-                <div className="">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            <div className="xs:grid-cols-2 grid  gap-4 md:grid-cols-2">
+              <div className="">
+                <div className="mr-8 inline-flex items-center space-x-2">
+                  <div className="">
+                    <Image
+                      className="text-white"
+                      width="27"
+                      height="27"
+                      src={github}
+                      alt="github icon"
                     />
-                  </svg>
+                  </div>
+
+                  <a
+                    href="https://github.com/gfxargentina"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Github</span>
+                  </a>
                 </div>
-                <span>4564587897</span>
+
+                <div className="inline-flex items-center space-x-2">
+                  <div className="">
+                    <Image
+                      width="27"
+                      height="27"
+                      src={linkedin}
+                      alt="facebook icon"
+                    />
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/luischilo-webdev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Linkedin</span>
+                  </a>
+                </div>
               </div>
 
-              <div className="inline-flex items-center space-x-2">
-                <div className="">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              <div className="">
+                <div className="mr-5 inline-flex items-center space-x-2">
+                  <div className="">
+                    <Image
+                      width="27"
+                      height="27"
+                      src={youtube}
+                      alt="facebook icon"
                     />
-                  </svg>
+                  </div>
+                  <a
+                    href="https://www.youtube.com/user/gfxargentina"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Youtube</span>
+                  </a>
                 </div>
-                <span>correo@gmail.com</span>
-              </div>
 
-              <div className="inline-flex items-center space-x-2">
-                <div className="">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div className="inline-flex items-center space-x-2">
+                  <div className="">
+                    <Image
+                      width="27"
+                      height="27"
+                      src={facebook}
+                      alt="facebook icon"
+                    />
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/luischilo-webdev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
+                    <span>Facebook</span>
+                  </a>
                 </div>
-                <span>Argentina</span>
               </div>
             </div>
-
-            <div className="space-x-10">
+            {/* <div className="space-x-10">
               <a href="#" className="text-white">
                 <Image
                   className="text-white"
                   width="27"
                   height="27"
                   src={github}
-                  alt="facebook icon"
+                  alt="github icon"
                 />
               </a>
               <a href="#">
@@ -104,7 +115,7 @@ const Contact = () => {
                   width="27"
                   height="27"
                   src={youtube}
-                  alt="facebook icon"
+                  alt="youtube icon"
                 />
               </a>
               <a href="#">
@@ -112,7 +123,7 @@ const Contact = () => {
                   width="27"
                   height="27"
                   src={linkedin}
-                  alt="facebook icon"
+                  alt="linkedin icon"
                 />
               </a>
               <a href="#">
@@ -123,10 +134,10 @@ const Contact = () => {
                   alt="facebook icon"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
 
-          <div className="w-8 rounded-xl bg-white p-4 shadow-lg md:w-2/3">
+          <div className="w-80 rounded-xl bg-white p-4 shadow-lg md:w-2/3">
             <form className="flex flex-col space-y-4" action="">
               <div>
                 <label className="text-sm text-gray-600" htmlFor="">

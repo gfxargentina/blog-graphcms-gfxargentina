@@ -16,7 +16,7 @@ const Portfolio = () => {
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
-        <h2 className="mt-10 mb-5 text-center text-2xl text-white">
+        <h2 className="mt-10 mb-5 text-center text-2xl text-lime-400">
           Mis Proyectos Web y Videos Motion Graphics
         </h2>
 

@@ -54,7 +54,7 @@ const HeroPostCarousel = () => {
           <Link href={`/post/${slugUrl[0]}`}>
             <div className="aspect-w-16 aspect-h-7 cursor-pointer">
               <img src={featuredPost[0]} className="object-cover " alt="" />
-              <p className="text-4xl font-bold text-white shadow-2xl">
+              <p className="xs:text-base font-bold text-white shadow-2xl md:text-4xl">
                 {title[0]}
               </p>
             </div>
@@ -62,7 +62,7 @@ const HeroPostCarousel = () => {
           <Link href={`/post/${slugUrl[1]}`}>
             <div className="aspect-w-16 aspect-h-7 cursor-pointer">
               <img src={featuredPost[1]} className="object-cover" alt="" />
-              <p className="text-4xl font-bold text-white shadow-2xl">
+              <p className="xs:text-base font-bold text-white shadow-2xl md:text-4xl">
                 {title[1]}
               </p>
             </div>
@@ -70,7 +70,7 @@ const HeroPostCarousel = () => {
           <Link href={`/post/${slugUrl[2]}`}>
             <div className="aspect-w-16 aspect-h-7 cursor-pointer">
               <img src={featuredPost[2]} className="object-cover" alt="" />
-              <p className="text-4xl font-bold text-white shadow-2xl">
+              <p className="xs:text-base font-bold text-white shadow-2xl md:text-4xl">
                 {title[2]}
               </p>
             </div>
