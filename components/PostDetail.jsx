@@ -30,7 +30,7 @@ const PostDetail = ({ post }) => {
             <div className="font-medium text-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-2 inline h-6 w-6 text-pink-500"
+                className="mr-2 inline h-6 w-6 text-blue-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
