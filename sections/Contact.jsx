@@ -91,7 +91,7 @@ const Contact = () => {
                     />
                   </div>
                   <a
-                    href="https://www.linkedin.com/in/luischilo-webdev/"
+                    href="https://es-la.facebook.com/gfxargentinavideos/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
