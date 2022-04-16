@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const PASSWORD = process.env.PASS_MAIL
 
-export default (req, res) => {
+export default async (req, res) => {
   const body = JSON.parse(req.body)
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
@@ -15,6 +15,19 @@ export default (req, res) => {
     secure: true,
   })
 
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error)
+        reject(error)
+      } else {
+        console.log('Server is ready to take our messages')
+        resolve(success)
+      }
+    })
+  })
+
   const mailData = {
     from: 'djluischilo@gmail.com',
     to: 'gfxargentina@gmail.com',
@@ -23,10 +36,18 @@ export default (req, res) => {
     html: `<div>${body.mensaje}</div><p>Sent from:
     ${body.email}</p>`,
   }
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err)
-    else console.log(info)
-  })
 
-  res.status(200).json({ status: 'ok' })
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, function (err, info) {
+      if (err) {
+        console.log(err)
+        reject(err)
+      } else {
+        console.log(info)
+        resolve(info)
+      }
+    })
+
+    res.status(200).json({ status: 'ok' })
+  })
 }
