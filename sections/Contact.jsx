@@ -21,6 +21,9 @@ const Contact = () => {
       })
       formik.resetForm()
       setAlert(true)
+      setTimeout(() => {
+        setAlert(false)
+      }, 5000)
     },
   })
 
