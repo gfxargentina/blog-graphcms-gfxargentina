@@ -106,7 +106,7 @@ const CommentsForm = ({ slug }) => {
         <button
           type="button"
           onClick={handleCommentSubmission}
-          className="ease inline-block cursor-pointer rounded-full border border-lime-500  px-8 py-3 text-lg text-black transition duration-500 hover:bg-lime-600 hover:text-white"
+          className="ease inline-block cursor-pointer rounded-full border bg-black  px-8 py-3 text-lg text-lime-400 transition duration-500 hover:bg-lime-600 hover:text-white"
         >
           Mandar Comentario
         </button>

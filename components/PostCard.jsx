@@ -51,7 +51,7 @@ const PostCard = ({ post }) => {
       </p>
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
-          <span className="inline-block transform cursor-pointer rounded-full border  border-lime-500 px-8 py-3 text-lg font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-lime-600 hover:text-white">
+          <span className="inline-block transform cursor-pointer rounded-full border  bg-black px-8 py-3 text-lg font-medium text-lime-400 transition duration-300 hover:-translate-y-1 hover:bg-lime-600 hover:text-white">
             Continuar Leyendo
           </span>
         </Link>
