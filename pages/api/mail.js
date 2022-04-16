@@ -40,7 +40,7 @@ export default async (req, res) => {
   await new Promise((resolve, reject) => {
     transporter.sendMail(mailData, function (err, info) {
       if (err) {
-        console.log(err)
+        res.send('error' + JSON.stringify(err))
         reject(err)
       } else {
         console.log(info)
