@@ -12,7 +12,7 @@ const Portfolio = () => {
   }, [])
 
   const proyectos = projects.map((proyect) => proyect)
-  console.log(projects)
+
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
