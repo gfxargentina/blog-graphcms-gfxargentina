@@ -35,7 +35,7 @@ const About = () => {
               GFXARGENTINA
             </h2>
             <h1 className="title-font mb-4 text-3xl font-medium text-lime-400">
-              Quien Soy
+              Sobre Mí
             </h1>
             <div className="mb-4 flex">
               <a className="flex-grow border-b-2 border-gray-300 py-2 px-1 text-lg"></a>
