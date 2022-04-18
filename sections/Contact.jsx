@@ -31,8 +31,6 @@ const Contact = () => {
   })
 
   const sendEmail = (e) => {
-    e.preventDefault()
-
     emailjs
       .sendForm(
         'gmail',
