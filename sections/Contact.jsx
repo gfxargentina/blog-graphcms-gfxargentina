@@ -33,7 +33,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     emailjs
       .sendForm(
-        'gmail',
+        'service_jmnv40n',
         'gfxargentina',
         '#contact-form',
         //process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
