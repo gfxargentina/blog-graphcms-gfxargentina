@@ -5,6 +5,7 @@ import youtube from '../public/youtube2.png'
 import linkedin from '../public/linkedin2.png'
 import github from '../public/github2.png'
 import { useFormik } from 'formik'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
   const [alert, setAlert] = useState(false)
@@ -15,10 +16,12 @@ const Contact = () => {
       mensaje: '',
     },
     onSubmit: (values) => {
-      fetch('/api/mail', {
-        method: 'post',
-        body: JSON.stringify(values),
-      })
+      // fetch('/api/mail', {
+      //   method: 'post',
+      //   body: JSON.stringify(values),
+      // })
+      sendEmail(values)
+
       formik.resetForm()
       setAlert(true)
       setTimeout(() => {
@@ -26,6 +29,26 @@ const Contact = () => {
       }, 5000)
     },
   })
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'gmail',
+        'gfxargentina',
+        form.current,
+        process.env.YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+  }
 
   return (
     <div className="mt-12 flex w-full items-center justify-center">

@@ -12,9 +12,6 @@ export default async (req, res) => {
       user: 'djluischilo@gmail.com',
       pass: PASSWORD,
     },
-    tls: {
-      rejectUnauthorized: false,
-    },
     secure: true,
   })
 
