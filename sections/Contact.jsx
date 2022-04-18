@@ -36,7 +36,8 @@ const Contact = () => {
         'gmail',
         'gfxargentina',
         '#contact-form',
-        process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
+        //process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
+        'user_1IWr7PjvlKq6BVX77Iw2L'
       )
       .then(
         (result) => {
