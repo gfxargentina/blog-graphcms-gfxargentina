@@ -32,12 +32,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     emailjs
-      .sendForm(
-        'gmail',
-        'gfxargentina',
-        form.current,
-        process.env.YOUR_PUBLIC_KEY
-      )
+      .sendForm('gmail', 'gfxargentina', e.target, process.env.YOUR_PUBLIC_KEY)
       .then(
         (result) => {
           console.log(result.text)
