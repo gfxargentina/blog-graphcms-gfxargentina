@@ -32,6 +32,6 @@ export async function getStaticProps() {
 
   return {
     props: { posts },
-    //TODO: agregar isr para que cuando se crea nuevo contenido en graphcms se actualize la pagina y no muestre error 404
+    revalidate: 60,
   }
 }
