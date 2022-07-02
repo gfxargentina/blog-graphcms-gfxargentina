@@ -10,6 +10,7 @@ const BlogRecentsPosts = () => {
       setRecentPosts(result)
     })
   }, [])
+  console.log(recentPosts)
 
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
