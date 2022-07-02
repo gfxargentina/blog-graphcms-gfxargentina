@@ -3,6 +3,7 @@ import { RecentPostCard } from '../components'
 //import { getRecentPosts } from '../services'
 
 const BlogRecentsPosts = ({ posts }) => {
+  console.log(posts)
   // const [recentPosts, setRecentPosts] = useState([])
 
   // useEffect(() => {
