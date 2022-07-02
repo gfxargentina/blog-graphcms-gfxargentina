@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { RecentPostCard } from '../components'
-//import { getRecentPosts } from '../services'
+import { getRecentPosts } from '../services'
 
 const BlogRecentsPosts = () => {
   const [recentPosts, setRecentPosts] = useState([])
