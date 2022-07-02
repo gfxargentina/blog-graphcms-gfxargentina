@@ -40,12 +40,3 @@ const BlogRecentsPosts = ({ posts }) => {
 }
 
 export default BlogRecentsPosts
-
-export async function getStaticProps() {
-  const posts = (await getRecentPosts()) || []
-
-  return {
-    props: { posts },
-    revalidate: 10,
-  }
-}

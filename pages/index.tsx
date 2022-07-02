@@ -6,8 +6,9 @@ import Portfolio from '../sections/Portfolio'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import About from '../sections/About'
+import { getRecentPosts } from '../services'
 
-export default function Home() {
+export default function Home({ posts }: any) {
   return (
     <div className="container mx-auto mb-8 px-10">
       <Head>
@@ -43,10 +44,19 @@ export default function Home() {
       </Head>
       <Hero />
       <About />
-      <BlogRecentsPosts />
+      <BlogRecentsPosts posts={posts} />
       <Portfolio />
       <Contact />
       <Footer />
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const posts = (await getRecentPosts()) || []
+
+  return {
+    props: { posts },
+    revalidate: 10,
+  }
 }
