@@ -51,7 +51,7 @@ const PostDetail = ({ post }) => {
         <RichText
           content={post.content.raw.children}
           renderers={{
-            h1: ({ children }) => <h1 className="text-white">{children}</h1>,
+            h1: ({ children }) => <h1>{children}</h1>,
             bold: ({ children }) => <strong>{children}</strong>,
             a: ({ children, href, openInNewTab }) => (
               <a
