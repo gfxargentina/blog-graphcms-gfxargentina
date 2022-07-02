@@ -51,7 +51,7 @@ const PostDetail = ({ post }) => {
         <RichText
           content={post.content.raw.children}
           renderers={{
-            img: ({ children }) => <img className="mt-5 mb-5">{children}</img>,
+            p: ({ children }) => <p className="mt-5 mb-5">{children}</p>,
             h1: ({ children }) => (
               <h1 className="mt-5 mb-5 text-xl">{children}</h1>
             ),
