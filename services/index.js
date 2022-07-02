@@ -79,6 +79,7 @@ export const getSimilarPosts = async (categories, slug) => {
           slug_not: $slug
           AND: { categories_some: { slug_in: $categories } }
         }
+        orderBy: createdAt_DESC
         last: 3
       ) {
         title
