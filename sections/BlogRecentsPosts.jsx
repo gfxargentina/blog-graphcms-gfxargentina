@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { RecentPosts } from '../components'
+import RecentPosts from '../sections/RecentPosts'
 //import { getRecentPosts } from '../services'
 
 const BlogRecentsPosts = () => {
