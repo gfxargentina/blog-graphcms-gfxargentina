@@ -1,6 +1,6 @@
 import { getRecentPosts } from '../services'
 
-const RecentsPosts = ({ posts }) => {
+export default function RecentsPosts({ posts }) {
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
@@ -28,8 +28,6 @@ const RecentsPosts = ({ posts }) => {
     </div>
   )
 }
-
-export default RecentsPosts
 
 export async function getStaticProps() {
   const posts = (await getRecentPosts()) || []
