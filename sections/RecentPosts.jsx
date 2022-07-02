@@ -1,4 +1,4 @@
-import { getRecentPosts } from '../services'
+import { getRecentPosts, getPosts } from '../services'
 
 export default function RecentsPosts({ posts }) {
   return (
@@ -30,7 +30,7 @@ export default function RecentsPosts({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = (await getRecentPosts()) || []
+  const posts = (await getPosts()) || []
 
   return {
     props: { posts },
