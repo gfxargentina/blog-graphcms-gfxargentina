@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import RecentPosts from '../sections/RecentPosts'
+import RecentsPosts from '../sections/RecentPosts'
 //import { getRecentPosts } from '../services'
 
 const BlogRecentsPosts = () => {
-  return <RecentPosts />
+  return <RecentsPosts />
   // const [recentPosts, setRecentPosts] = useState([])
 
   // useEffect(() => {
