@@ -12,7 +12,7 @@ import Head from 'next/head'
 
 const PostDetails = ({ post }) => {
   return (
-    <div className="container mx-auto mb-8 px-10">
+    <div className="container mx-auto mb-8 md:px-10">
       <Head>
         <title>{post.title}</title>
         <meta name="title" content={post.title} />
