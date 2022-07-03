@@ -14,7 +14,7 @@ const PostDetail = ({ post }) => {
         />
       </div>
 
-      <div className=" lg:px-0 ">
+      <div className="px-2 lg:px-0 ">
         <div className="mb-8 flex w-full items-center ">
           <div className="mb-4 mr-8 flex w-full items-center justify-center lg:mb-0 lg:w-auto">
             <img

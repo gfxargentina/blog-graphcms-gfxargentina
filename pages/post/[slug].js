@@ -30,7 +30,7 @@ const PostDetails = ({ post }) => {
         <meta property="twitter:description" content={post.excerpt} />
         <meta property="twitter:image" content={post.featuredImage.url} />
       </Head>
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+      <div className="grid grid-cols-1 md:gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
           <PostDetail post={post} />
           <Author author={post.author} />
@@ -39,7 +39,7 @@ const PostDetails = ({ post }) => {
         </div>
 
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative top-8 hidden lg:sticky">
+          <div className="relative top-8 hidden md:block lg:sticky">
             <PostWidget
               slug={post.slug}
               categories={post.categories.map((category) => category.slug)}
