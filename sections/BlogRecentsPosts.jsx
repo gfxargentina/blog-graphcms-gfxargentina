@@ -12,7 +12,7 @@ const BlogRecentsPosts = () => {
   }, [])
 
   //para mostrar los ultimos 6 posts
-  const lastPosts = recentPosts.slice(0, 7)
+  const lastPosts = recentPosts.slice(0, 6)
 
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
