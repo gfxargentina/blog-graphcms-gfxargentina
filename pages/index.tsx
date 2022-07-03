@@ -10,7 +10,7 @@ import { getRecentPosts } from '../services'
 
 export default function Home() {
   return (
-    <div className="container mx-auto mb-8 px-10">
+    <div className="container mx-auto mb-8 md:px-10">
       <Head>
         //Primary Meta Tags
         <title>GFXARGENTINA</title>
