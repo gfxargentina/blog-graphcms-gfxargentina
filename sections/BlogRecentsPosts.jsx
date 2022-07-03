@@ -11,6 +11,9 @@ const BlogRecentsPosts = () => {
     })
   }, [])
 
+  //para mostrar los ultimos 6 posts
+  const lastPosts = recentPosts.slice(0, 7)
+
   return (
     <div className="container mx-auto   items-center  px-8 md:px-14 lg:px-24">
       <section className="">
@@ -26,7 +29,7 @@ const BlogRecentsPosts = () => {
         <div className="">
           <div className="">
             <div className="xs:grid-cols-2 grid  gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-              {recentPosts.map((post) => (
+              {lastPosts.map((post) => (
                 <div key={post.title}>
                   <RecentPostCard post={post} />
                 </div>
