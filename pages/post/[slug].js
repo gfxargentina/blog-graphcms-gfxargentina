@@ -39,7 +39,7 @@ const PostDetails = ({ post }) => {
         </div>
 
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative top-8 lg:sticky">
+          <div className="relative top-8 hidden lg:sticky">
             <PostWidget
               slug={post.slug}
               categories={post.categories.map((category) => category.slug)}
