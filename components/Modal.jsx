@@ -1,5 +1,4 @@
 import React from 'react'
-import video from './video.mp4'
 
 import ReactPlayer from 'react-player'
 

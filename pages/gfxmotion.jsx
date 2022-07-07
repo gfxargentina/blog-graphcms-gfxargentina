@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-import play from './play-icon.png'
-import logo from './GFXMOTION-LOGO.png'
-import service from './services-icon.png'
-import clock from './clock-icon.png'
-import mobile from './mobile.png'
+import play from '/play-icon.png'
+import logo from '/GFXMOTION-LOGO.png'
+import service from '/services-icon.png'
+import clock from '/clock-icon.png'
+import mobile from '/mobile.png'
 
 import ReactPlayer from 'react-player'
 import Modal from '../components/Modal'
