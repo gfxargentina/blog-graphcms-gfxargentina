@@ -613,4 +613,4 @@ function Gfxmotion() {
   )
 }
 
-export default App
+export default Gfxmotion
