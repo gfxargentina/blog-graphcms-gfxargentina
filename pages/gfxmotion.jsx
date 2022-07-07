@@ -614,3 +614,8 @@ function Gfxmotion() {
 }
 
 export default Gfxmotion
+
+// //para excluir esta pagina del main layout, para que no muestre el navbar
+// Gfxmotion.getLayout = function PageLayout(page) {
+//   return <>{page}</>
+// }

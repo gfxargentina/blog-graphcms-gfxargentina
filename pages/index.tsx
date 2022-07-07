@@ -6,7 +6,6 @@ import Portfolio from '../sections/Portfolio'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import About from '../sections/About'
-import { getRecentPosts } from '../services'
 
 export default function Home() {
   return (
