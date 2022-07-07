@@ -116,7 +116,7 @@ const ContactGfx = () => {
                     />
                   </div>
                   <a
-                    href="https://www.youtube.com/user/gfxargentina"
+                    href="https://www.youtube.com/user/gfxmotionvideos"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -134,7 +134,7 @@ const ContactGfx = () => {
                     />
                   </div>
                   <a
-                    href="https://es-la.facebook.com/gfxargentinavideos/"
+                    href="https://www.facebook.com/gfxmotiontemplates/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -143,41 +143,6 @@ const ContactGfx = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="space-x-10">
-              <a href="#" className="text-white">
-                <Image
-                  className="text-white"
-                  width="27"
-                  height="27"
-                  src={github}
-                  alt="github icon"
-                />
-              </a>
-              <a href="#">
-                <Image
-                  width="27"
-                  height="27"
-                  src={youtube}
-                  alt="youtube icon"
-                />
-              </a>
-              <a href="#">
-                <Image
-                  width="27"
-                  height="27"
-                  src={linkedin}
-                  alt="linkedin icon"
-                />
-              </a>
-              <a href="#">
-                <Image
-                  width="27"
-                  height="27"
-                  src={facebook}
-                  alt="facebook icon"
-                />
-              </a>
-            </div> */}
           </div>
 
           <div className="w-80 rounded-xl bg-white p-4 shadow-lg md:w-2/3">
