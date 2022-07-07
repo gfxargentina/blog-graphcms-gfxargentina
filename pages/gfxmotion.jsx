@@ -242,7 +242,7 @@ function Gfxmotion() {
             </div>
             <div>
               <a
-                href="/"
+                href="https://paypal.me/gfxmotion"
                 className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
               >
                 Buy
@@ -268,7 +268,7 @@ function Gfxmotion() {
             </div>
             <div>
               <a
-                href="/"
+                href="https://paypal.me/gfxmotion"
                 className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
               >
                 Buy
@@ -300,7 +300,7 @@ function Gfxmotion() {
             </div>
             <div>
               <a
-                href="/"
+                href="https://paypal.me/gfxmotion"
                 className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gradient-to-br from-purple-600 to-blue-500 px-6 font-medium tracking-wide text-white shadow-md transition  duration-200 focus:outline-none"
               >
                 Buy
@@ -329,7 +329,7 @@ function Gfxmotion() {
             </div>
             <div>
               <a
-                href="/"
+                href="https://paypal.me/gfxmotion"
                 className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
               >
                 Buy Business
