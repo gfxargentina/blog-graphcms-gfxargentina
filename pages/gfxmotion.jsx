@@ -19,7 +19,11 @@ function Gfxmotion() {
   return (
     <div className="bg-gray-700">
       <div className="md:mx-auto md:flex md:max-w-7xl md:flex-col">
-        <img src={logo} className="mb-7 scale-75" alt="gfxmotion logo design" />
+        <img
+          src="/GFXMOTION-LOGO.png"
+          className="mb-7 scale-75"
+          alt="gfxmotion logo design"
+        />
         <div className="text-center md:flex md:items-center md:justify-center md:py-3">
           <div className="mb-5 text-4xl text-white md:text-9xl ">
             After Effects Video Template Customization
@@ -30,7 +34,7 @@ function Gfxmotion() {
             onClick={() => setMostrarModal(true)}
             className=" px-3 py-2 text-xl text-white transition hover:scale-95 "
           >
-            <img src={play} alt="video play" />
+            <img src="/play-icon.png" alt="video play" />
           </button>
           <p className="text-lg text-white">Play Video</p>
         </div>
@@ -46,7 +50,11 @@ function Gfxmotion() {
 
             <div className="relative mb-10 flex items-center">
               <div className="absolute mx-8 inline-block rounded-xl bg-gradient-to-r from-purple-800  via-violet-800 to-purple-600 p-2 shadow-lg">
-                <img className="w-10" src={service} alt="services icon" />
+                <img
+                  className="w-10"
+                  src="/services-icon.png"
+                  alt="services icon"
+                />
               </div>
             </div>
             <div className="px-8 pb-4">
@@ -77,7 +85,7 @@ function Gfxmotion() {
               <div className="absolute mx-8 inline-block rounded-xl bg-gradient-to-r from-purple-800  via-violet-800 to-purple-600 p-2 shadow-lg">
                 <img
                   className="w-10"
-                  src={clock}
+                  src="/clock-icon.png"
                   alt="clock turn around icon"
                 />
               </div>
@@ -105,7 +113,11 @@ function Gfxmotion() {
 
             <div className="relative mb-10 flex items-center">
               <div className="absolute mx-8 inline-block rounded-xl bg-gradient-to-r from-purple-800  via-violet-800 to-purple-600 p-2 shadow-lg">
-                <img className="w-10" src={mobile} alt="mobile phone icon" />
+                <img
+                  className="w-10"
+                  src="/mobile.png"
+                  alt="mobile phone icon"
+                />
               </div>
             </div>
             <div className="px-8 pb-4">
