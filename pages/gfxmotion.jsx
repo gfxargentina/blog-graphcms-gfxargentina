@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import ReactPlayer from 'react-player'
 import Modal from '../components/Modal'
+import ContactGfx from '../sections/ContactGfx'
 
 function Gfxmotion() {
   //pone en true la prop que se le pasa al componente Modal
@@ -340,6 +341,8 @@ function Gfxmotion() {
           </div>
         </div>
       </div>
+
+      <ContactGfx />
 
       {/* FAQS */}
 
