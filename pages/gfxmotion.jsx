@@ -402,8 +402,7 @@ function Gfxmotion() {
             </p>
             <p class="mt-2">
               <p class="text-base leading-6 text-gray-400">
-                I use Paypal, i send a detailed invoice, the payment is 100%
-                upfront.
+                I use Paypal and Payoneer, the payment is 100% upfront.
               </p>
             </p>
           </li>
