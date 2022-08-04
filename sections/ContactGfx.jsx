@@ -59,9 +59,7 @@ const ContactGfx = () => {
             </h1>
             <p className="w-auto pt-2 text-xl text-lime-400">
               I'm online for a quick reply from 10am to 13hs and 19pm to 21hs
-              from Monday to Friday GMT+3/UTC-3 Argentina time. *I DON´T
-              CUSTOMIZE AE TEMPLATES THAT REQUIERE ELEMENT 3D PLUGIN, Red Giant
-              Trapcode Suite etc.
+              from Monday to Friday GMT+3/UTC-3 Argentina time.
             </p>
 
             <div className="xs:grid-cols-2 grid  gap-4 md:grid-cols-2">

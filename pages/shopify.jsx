@@ -21,7 +21,7 @@ function Shopify() {
         />
         <div className="text-center md:flex md:items-center md:justify-center md:py-3">
           <div className="mb-5 text-4xl text-white md:text-9xl ">
-            After Effects Video Template Customization
+            Engage shoppers and boost sales with Video Product Promotions.
           </div>
         </div>
         <div className="flex items-center justify-center">
@@ -47,20 +47,19 @@ function Shopify() {
               <div className="absolute mx-8 inline-block rounded-xl bg-gradient-to-r from-purple-800  via-violet-800 to-purple-600 p-2 shadow-lg">
                 <img
                   className="w-10"
-                  src="/services-icon.png"
+                  src="/Video-play.png"
                   alt="services icon"
                 />
               </div>
             </div>
             <div className="px-8 pb-4">
-              <h4 className="text-sm font-light text-gray-500">
-                After Effects
-              </h4>
+              <h4 className="text-sm font-light text-gray-500">Video</h4>
               <h2 className="mb-5 text-xl font-bold text-gray-800">
-                Customizations
+                Marketing
               </h2>
               <p className="text-lg text-gray-600">
-                More than 200 jobs Done. 100% recommended.
+                Pages with videos keep shoppers engaged and increase time spent
+                on site
                 <br />
                 <br />
               </p>
@@ -86,13 +85,17 @@ function Shopify() {
               </div>
             </div>
             <div className="px-8 pb-4">
-              <h4 className="text-sm font-light text-gray-500">Standard</h4>
+              <h4 className="text-sm font-light text-gray-500">
+                Standard 15 seconds video
+              </h4>
               <h2 className="mb-5 text-xl font-bold text-gray-800">
-                24hs Turn Around Time
+                72hs Turn Around Time
               </h2>
               <p className="text-lg text-gray-600">
                 Just send me your desire texts and images and i delivery a final
-                video in 24hs.
+                video in 72hs.
+                <br />
+                <br />
               </p>
             </div>
           </div>
@@ -121,8 +124,10 @@ function Shopify() {
                 Aspect Ratio
               </h2>
               <p className="text-lg text-gray-600">
-                Choose from more than 1000 templates, vertical, square and
-                horizontal formats.
+                Choose your video format, vertical, square and horizontal
+                formats for any Social Media site.
+                <br />
+                <br />
               </p>
             </div>
           </div>
@@ -131,7 +136,7 @@ function Shopify() {
 
       {/* VIDEOS */}
       <div className="m-5 text-center text-3xl text-white md:mb-10 md:text-5xl ">
-        Check Some of my Customizations
+        Check Some of the videos i made
       </div>
       <div className="mb-5 flex flex-col  p-2 md:mx-auto md:grid md:max-w-7xl md:grid-cols-3 md:gap-4">
         <div className="mb-5">
@@ -220,64 +225,14 @@ function Shopify() {
               </span>
             </span>
           </h2>
-          <p className="text-base text-white md:text-lg">
+          {/* <p className="text-base text-white md:text-lg">
             Special price for my clients from Envato Studio, just send me your
             envato studio username when you purchased my services in Envato
             Studio.
-          </p>
+          </p> */}
         </div>
-        <div className="row-gap-5  sm:row-gap-10 grid gap-10 sm:mx-auto lg:grid-cols-4 lg:gap-2">
-          <div className="flex flex-col justify-between rounded-lg border bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow sm:items-center">
-            <div className="text-center">
-              <div className="text-lg font-semibold">Envato Studio Clients</div>
-              <div className="mt-2 flex items-center justify-center">
-                <div className="mr-1 text-5xl font-bold">$75</div>
-                <div className="text-xs text-gray-700">Per Template</div>
-              </div>
-              <div className="mt-2 space-y-3">
-                <div className="text-gray-700">Delivery in 24hs</div>
-                <div className="text-gray-700">2 revisions</div>
-                <div className="text-gray-700">MP4 Format</div>
-              </div>
-            </div>
-            <div>
-              <a
-                href="https://paypal.me/gfxmotion/75"
-                className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
-              >
-                Buy
-              </a>
-              <p className="mt-6 max-w-xs text-xs text-gray-600 sm:mx-auto sm:max-w-sm sm:text-center sm:text-sm">
-                Video Template and Music is not included.
-              </p>
-            </div>
-          </div>
 
-          <div className="flex flex-col justify-between rounded-lg border bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow sm:items-center">
-            <div className="text-center">
-              <div className="text-lg font-semibold">Envato Elements</div>
-              <div className="mt-2 flex items-center justify-center">
-                <div className="mr-1 text-5xl font-bold">$100</div>
-                <div className="text-xs text-gray-700">Per Template</div>
-              </div>
-              <div className="mt-2 space-y-3">
-                <div className="text-gray-700">Delivery in 24hs</div>
-                <div className="text-gray-700">2 revisions</div>
-                <div className="text-gray-700">MP4 Format</div>
-              </div>
-            </div>
-            <div>
-              <a
-                href="https://paypal.me/gfxmotion/100"
-                className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
-              >
-                Buy
-              </a>
-              <p className="mt-6 max-w-xs text-xs text-gray-600 sm:mx-auto sm:max-w-sm sm:text-center sm:text-sm">
-                Video Template and Music is included. Envato Elements License.
-              </p>
-            </div>
-          </div>
+        <div className="row-gap-5  sm:row-gap-10 grid gap-10 sm:mx-auto lg:grid-cols-3 lg:gap-2">
           <div className="border-deep-purple-accent-400 relative flex flex-col justify-between rounded-lg border bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow sm:items-center">
             <div className="absolute inset-x-0 top-0 -mt-3 flex justify-center">
               <div className="inline-block rounded bg-gradient-to-br from-purple-600 to-blue-500 px-3 py-1 text-xs font-medium  uppercase tracking-wider text-white">
@@ -285,32 +240,86 @@ function Shopify() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-semibold">
-                Estandard Customization
-              </div>
+              <div className="text-lg font-semibold">15 Seconds Video</div>
               <div className="mt-2 flex items-center justify-center">
-                <div className="mr-1 text-5xl font-bold">$85</div>
-                <div className="text-xs text-gray-700">Per Template</div>
+                <div className="mr-1 text-5xl font-bold">$25</div>
+                <div className="text-xs text-gray-700">Per Video</div>
               </div>
               <div className="mt-2 space-y-3">
-                <div className="text-gray-700">Delivery in 24Hs</div>
+                <div className="text-gray-700">Delivery in 3 days</div>
                 <div className="text-gray-700">2 Revisions</div>
                 <div className="text-gray-700">MP4 Format</div>
               </div>
             </div>
             <div>
               <a
-                href="https://paypal.me/gfxmotion/85"
+                href="#contact"
                 className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gradient-to-br from-purple-600 to-blue-500 px-6 font-medium tracking-wide text-white shadow-md transition  duration-200 focus:outline-none"
               >
-                Buy
+                Send me a message
               </a>
               <p className="mt-6 max-w-xs text-xs text-gray-600 sm:mx-auto sm:max-w-sm sm:text-center sm:text-sm">
-                Video Template and Music is not included
+                I use Paypal for payment, i send you an invoice and you can do
+                partial payments until the jobs in finish.
               </p>
             </div>
           </div>
+
           <div className="flex flex-col justify-between rounded-lg border bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow sm:items-center">
+            <div className="text-center">
+              <div className="text-lg font-semibold">30 Seconds Video</div>
+              <div className="mt-2 flex items-center justify-center">
+                <div className="mr-1 text-5xl font-bold">$45</div>
+                <div className="text-xs text-gray-700">Per Video</div>
+              </div>
+              <div className="mt-2 space-y-3">
+                <div className="text-gray-700">Delivery in 4 days</div>
+                <div className="text-gray-700">3 revisions</div>
+                <div className="text-gray-700">MP4 Format</div>
+              </div>
+            </div>
+            <div>
+              <a
+                href="#contact"
+                className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
+              >
+                Send me a message
+              </a>
+              <p className="mt-6 max-w-xs text-xs text-gray-600 sm:mx-auto sm:max-w-sm sm:text-center sm:text-sm">
+                I use Paypal for payment, i send you an invoice and you can do
+                partial payments until the jobs in finish.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between rounded-lg border bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow sm:items-center">
+            <div className="text-center">
+              <div className="text-lg font-semibold">60 Seconds Video</div>
+              <div className="mt-2 flex items-center justify-center">
+                <div className="mr-1 text-5xl font-bold">$80</div>
+                <div className="text-xs text-gray-700">Per Video</div>
+              </div>
+              <div className="mt-2 space-y-3">
+                <div className="text-gray-700">Delivery in 5 days</div>
+                <div className="text-gray-700">4 revisions</div>
+                <div className="text-gray-700">MP4 Format</div>
+              </div>
+            </div>
+            <div>
+              <a
+                href="#contact"
+                className="focus:shadow-outline mt-6 inline-flex h-12 w-full items-center justify-center rounded bg-gray-800 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-gray-900 focus:outline-none"
+              >
+                Send me a message
+              </a>
+              <p className="mt-6 max-w-xs text-xs text-gray-600 sm:mx-auto sm:max-w-sm sm:text-center sm:text-sm">
+                I use Paypal for payment, i send you an invoice and you can do
+                partial payments until the jobs in finish.
+              </p>
+            </div>
+          </div>
+
+          {/* <div className="flex flex-col justify-between rounded-lg border bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow sm:items-center">
             <div className="text-center">
               <div className="text-lg font-semibold">
                 Business Customization
@@ -338,11 +347,13 @@ function Shopify() {
                 Video Template and Music is not included
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <ContactGfx />
+      <div id="contact">
+        <ContactGfx />
+      </div>
 
       {/* FAQS */}
 
@@ -352,62 +363,123 @@ function Shopify() {
         </h2>
         <ul class="flex flex-wrap items-start gap-8">
           <li class="md:w-2/5">
-            <p class="text-lg font-medium leading-6 text-white">
-              What is Envato Elements Customization?
-            </p>
+            <p class="text-lg font-medium leading-6 text-white">How i Work?</p>
             <p class="mt-2">
               <p class="text-base leading-6 text-gray-400">
-                I have an Envato Elements Suscription, you can choose you desire
-                After Effects Template from here:
-                <a
-                  className="hover:text-blue-400"
-                  href="https://elements.envato.com/video-templates/compatible-with-after-effects"
-                  target="blank"
-                  rel="noopener noreferrer"
-                >
-                  Envato Elements AE templates
-                </a>
-                , the price is for the customization of only 1 template from
-                Envato Elements and the AFTER EFFECTS PROJECT FILE IS NOT
-                INCLUDED, IS ONLY INCLUDED THE FINAL RENDERED VIDEO. This Price
-                include:
+                For begin the work i charge %50 of the final price upfront, you
+                pay the rest when the video is finish and approve. Once the
+                first payment is done, i sent you a link to join my workspace in
+                slack and we can plan together how you want your video
+                <br />
+                <br />
+                This are my Phases:
                 <ul className="mt-2 p-5">
-                  <li className="mb-2 list-disc text-white">
-                    You can choose ONLY 1 After Effects Template from Envato
-                    Elements
+                  <li className="mb-5 list-disc text-white">
+                    Pre-Production contact: I sent you a small form with a few
+                    questions about your business, This is the part of the
+                    process where you'll want to communicate things like
+                    branding, target audience, and the tone and feel for the
+                    Video.
                   </li>
 
-                  <li className="mb-2 list-disc text-white">
-                    Template customization up to 2 minutes of duration, and up
-                    to 2 hs of render time.
+                  <li className="mb-5 list-disc text-white">
+                    Production: The production phase is where you send to me all
+                    the raw materials for your video, ex.: texts/images/videos
+                    you want in your final video.
                   </li>
 
-                  <li className="mb-2 list-disc text-white">
-                    change text's,color and add images or videos in
-                    placeholders, don`t include add more placeholders,text's or
-                    extend/shorten duration of the template.
+                  <li className="mb-5 list-disc text-white">
+                    Post-Production: I begin work in the design of your video, i
+                    will handle all the nuts and bolts of making your video come
+                    to life. So, just sit tight and wait for the magic to
+                    happen.
                   </li>
 
-                  <li className="list-disc text-white">
-                    After Effects Video Template and Music is included.
+                  <li className="mb-5 list-disc text-white">
+                    Revision: Once the initial version of the video is edited,
+                    it's time to review the work. Assuming there are some
+                    changes that need to be made, the revision process can
+                    begin. I send you a video for revision and you let me know
+                    if is ok or if you want any changes.
+                  </li>
+
+                  <li className="mb-5 list-disc text-white">
+                    Final Delivery: Once the video is finalized and approved,
+                    it's time to export the video to its final format. All
+                    platforms (YouTube, Facebook, Tiktok, Instagram etc) have
+                    slightly different specifications for optimal video
+                    playback.
                   </li>
                 </ul>
               </p>
             </p>
           </li>
 
-          <li class="md:w-2/5">
-            <p class="text-lg font-medium leading-6 text-white">
+          <li className="md:w-2/5">
+            <p className="text-lg font-medium leading-6 text-white">
               Wich payment method do you accept?
             </p>
-            <p class="mt-2">
-              <p class="text-base leading-6 text-gray-400">
-                I use Paypal and Payoneer, the payment is 100% upfront.
+            <p className="mt-2 mb-5">
+              <p className="text-base leading-6 text-gray-400">
+                I use Paypal invoice, i charge %50 of the final price upfront to
+                begin the work and the rest when the job is finish and approve.
               </p>
+            </p>
+
+            <p className="text-lg font-medium leading-6 text-white">
+              What times do i find you online?
+            </p>
+            <p className="mt-2">
+              <p className="mb-5 text-base leading-6 text-gray-400">
+                I'm online for a quick reply from 10am to 13hs and 19pm to 21hs
+                from Monday to Friday GMT+3/UTC-3 Argentina time
+              </p>
+
+              <a
+                href="#contact"
+                className="group relative inline-flex items-center justify-start overflow-hidden rounded bg-gray-50 py-3 pl-4 pr-12 font-semibold text-indigo-600 transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6"
+              >
+                <span className="absolute bottom-0 left-0 h-1 w-full bg-indigo-600 transition-all duration-150 ease-in-out group-hover:h-full"></span>
+                <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                  <svg
+                    className="h-5 w-5 text-green-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </span>
+                <span className="absolute left-0 -translate-x-12 pl-2.5 duration-200 ease-out group-hover:translate-x-0">
+                  <svg
+                    className="h-5 w-5 text-green-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWwidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </span>
+                <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+                  Send me a message
+                </span>
+              </a>
             </p>
           </li>
 
-          <li class="md:w-2/5">
+          {/* <li class="md:w-2/5">
             <p class="text-lg font-medium leading-6 text-white">
               What is Envato Studio Clients Customization?
             </p>
@@ -436,8 +508,9 @@ function Shopify() {
                 </ul>
               </p>
             </p>
-          </li>
-          <li class="md:w-2/5">
+          </li> */}
+
+          {/* <li class="md:w-2/5">
             <p class="text-lg font-medium leading-6 text-white">
               What is Standard Customization?
             </p>
@@ -479,6 +552,7 @@ function Shopify() {
               </p>
             </p>
           </li>
+
           <li class="md:w-2/5">
             <p class="text-lg font-medium leading-6 text-white">
               What is Business Customization?
@@ -508,6 +582,7 @@ function Shopify() {
               </p>
             </p>
           </li>
+
           <li class="md:w-2/5">
             <p class="text-lg font-medium leading-6 text-white">
               What is Advance Customization?
@@ -555,8 +630,9 @@ function Shopify() {
                 </ul>
               </p>
             </p>
-          </li>
-          <li class="md:w-2/5">
+          </li> */}
+
+          {/* <li class="md:w-2/5">
             <p class="text-lg font-medium leading-6 text-white">
               Where can i buy After Effects Templates?
             </p>
@@ -606,7 +682,7 @@ function Shopify() {
                 </ul>
               </p>
             </p>
-          </li>
+          </li> */}
         </ul>
       </div>
 
