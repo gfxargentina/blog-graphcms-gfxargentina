@@ -47,7 +47,7 @@ function Shopify() {
               <div className="absolute mx-8 inline-block rounded-xl bg-gradient-to-r from-purple-800  via-violet-800 to-purple-600 p-2 shadow-lg">
                 <img
                   className="w-10"
-                  src="/Video-play.png"
+                  src="/Video-Play.png"
                   alt="services icon"
                 />
               </div>
