@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 import Modal from '../components/Modal'
 import ContactGfx from '../sections/ContactGfx'
 
-function Gfxmotion() {
+function Shopify() {
   //pone en true la prop que se le pasa al componente Modal
   const [mostrarModal, setMostrarModal] = useState(false)
 
@@ -615,9 +615,9 @@ function Gfxmotion() {
   )
 }
 
-export default Gfxmotion
+export default Shopify
 
 // //para excluir esta pagina del main layout, para que no muestre el navbar
-Gfxmotion.getLayout = function PageLayout(page) {
-  return <>{page}</>
-}
+// Gfxmotion.getLayout = function PageLayout(page) {
+//   return <>{page}</>
+// }
