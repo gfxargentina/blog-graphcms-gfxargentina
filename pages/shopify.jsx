@@ -242,7 +242,7 @@ function Shopify() {
             <div className="text-center">
               <div className="text-lg font-semibold">15 Seconds Video</div>
               <div className="mt-2 flex items-center justify-center">
-                <div className="mr-1 text-5xl font-bold">$25</div>
+                <div className="mr-1 text-5xl font-bold">$45</div>
                 <div className="text-xs text-gray-700">Per Video</div>
               </div>
               <div className="mt-2 space-y-3">
@@ -269,7 +269,7 @@ function Shopify() {
             <div className="text-center">
               <div className="text-lg font-semibold">30 Seconds Video</div>
               <div className="mt-2 flex items-center justify-center">
-                <div className="mr-1 text-5xl font-bold">$45</div>
+                <div className="mr-1 text-5xl font-bold">$75</div>
                 <div className="text-xs text-gray-700">Per Video</div>
               </div>
               <div className="mt-2 space-y-3">
@@ -296,7 +296,7 @@ function Shopify() {
             <div className="text-center">
               <div className="text-lg font-semibold">60 Seconds Video</div>
               <div className="mt-2 flex items-center justify-center">
-                <div className="mr-1 text-5xl font-bold">$80</div>
+                <div className="mr-1 text-5xl font-bold">$130</div>
                 <div className="text-xs text-gray-700">Per Video</div>
               </div>
               <div className="mt-2 space-y-3">
