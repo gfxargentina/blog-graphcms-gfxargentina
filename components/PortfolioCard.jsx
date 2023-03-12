@@ -26,7 +26,7 @@ const PortfolioCard = ({ portfolio }) => {
             {/* <img src="#" alt="" className="mr-2 h-6 w-6 rounded-full" /> */}
             {portfolio.categoria === 'MOTION GRAPHICS' ? (
               ''
-            ) : (
+            ) : portfolio.github ? (
               <div className="flex items-center">
                 <div className="mr-2">
                   <svg
@@ -39,14 +39,13 @@ const PortfolioCard = ({ portfolio }) => {
                   </svg>
                 </div>
                 <button className="focus:shadow-outline h-8 rounded-lg border bg-black px-2 font-bold text-lime-400 transition-colors duration-150 hover:bg-lime-600 hover:text-indigo-100 md:text-xs">
-                  <a
-                    href={portfolio.github ? portfolio.github : ''}
-                    target="_blank"
-                  >
+                  <a href={portfolio.github} target="_blank">
                     Ver Codigo
                   </a>
                 </button>
               </div>
+            ) : (
+              ''
             )}
 
             <div className="flex items-center">
