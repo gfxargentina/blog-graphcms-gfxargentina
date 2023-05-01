@@ -22,6 +22,10 @@ function Gfxmotion() {
         <div className="text-center md:flex md:items-center md:justify-center md:py-3">
           <div className="mb-5 text-4xl text-white md:text-9xl ">
             After Effects Video Template Customization
+            <h2 className="text-2xl">
+              Este sitio web es propiedad de y es administrado por Luis Eduardo
+              Chilo
+            </h2>
           </div>
         </div>
         <div className="flex items-center justify-center">
