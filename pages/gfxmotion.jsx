@@ -23,8 +23,11 @@ function Gfxmotion() {
           <div className="mb-5 text-4xl text-white md:text-9xl ">
             After Effects Video Template Customization
             <h2 className="text-2xl">
-              Este sitio web es propiedad de y es administrado por Luis Eduardo
-              Chilo
+              This site is owned and operated by Luis Eduardo Chilo and
+              luischiloar@gmail.com
+            </h2>
+            <h2 className="text-2xl">
+              Phone: +543816466758 - Address: Av. Solano Vera 102
             </h2>
           </div>
         </div>
